@@ -3,9 +3,8 @@ from flask import Flask
 app = Flask(__name__)
 app.config['DEBUG'] = True
 
-@app.route("/")
 
-form = """
+form = '''
 <!DOCTYPE html>
 <html>
 	<head>
@@ -34,8 +33,9 @@ form = """
 		</form>
 	</body>
 </html>
-"""
+'''
 
+@app.route("/")
 def index():
     return form
 
